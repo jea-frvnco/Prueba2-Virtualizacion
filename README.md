@@ -18,13 +18,23 @@ Este repositorio contiene un proyecto que implementa Nagios Core dentro de un co
 
 ## 🛠️ Construcción y ejecución local
 
-1. Clona el repositorio:
+Clona el repositorio:
 
 git clone https://github.com/<tu_usuario>/nagios-docker.git
 cd nagios-docker
 
-2. Da permisos al script de inicio:
+2.Da permisos al script de inicio:
 chmod +x start.sh
 
 3.Construye la imagen Docker:
 docker build -t nagios-core .
+
+4.Ejecuta el contenedor:
+docker run -d -p 80:80 --name nagios nagios-core
+
+5.Abre el navegador y accede a:
+http://localhost
+Credenciales de acceso:
+Usuario: nagiosadmin
+Contraseña: nagiosadmin
+
